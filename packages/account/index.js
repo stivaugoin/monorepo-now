@@ -1,5 +1,5 @@
 function isLogged() {
-  return false
+  return true
 }
 
 module.exports = {
