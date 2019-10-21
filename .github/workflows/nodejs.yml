@@ -17,13 +17,17 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: install lerna
-      run: npm install lerna yarn
-    - name: lerna bootstrap
-      run: lerna bootstrap
-    - name: yarn install
+    - name: install
       run: |
-        cd packages/app && yarn deploy
-        cd packages/website && yarn deploy
+        yarn global add lerna jest now
+        lerna bootstrap
+    - name: deploy app
+      run: |
+        cd packages/app
+        yarn deploy
+    - name: deploy website
+      run: |
+        cd packages/website
+        yarn deploy
       env:
         CI: true
