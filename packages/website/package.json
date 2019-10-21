@@ -3,7 +3,8 @@
   "scripts": {
     "start": "next -p 3001",
     "build": "next build",
-    "start-next": "next start"
+    "start-next": "next start",
+    "deploy": "now"
   },
   "version": "0.1.0",
   "private": true,
