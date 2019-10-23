@@ -1,7 +1,9 @@
 name: CI
 
 on:
-  create: tag
+  push:
+    tags: 
+      - production 
 
 jobs:
   build:
