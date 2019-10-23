@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Deploy Website
-      run: yarn deploy:website
+      run: yarn deploy:website --token=${{ secrets.ZEIT_NOW_TOKEN }}
     - name: Deploy App
-      run: yarn deploy:app
+      run: yarn deploy:app --token=${{ secrets.ZEIT_NOW_TOKEN }}
