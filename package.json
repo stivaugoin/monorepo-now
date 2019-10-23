@@ -4,7 +4,7 @@
   "workspaces": ["packages/*"],
   "scripts": {
     "deploy:app": "now --local-config app.now.json",
-    "deploy:website": "now --local-config website.now.json",
-    "deploy:all": "yarn deploy:app & yarn deploy:website"
+    "deploy:website": "now --local-config website.now.json --prod",
+    "deploy:all": "yarn deploy:app & yarn deploy:website --prod"
   }
 }
