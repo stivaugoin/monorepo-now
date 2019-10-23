@@ -3,8 +3,8 @@
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
-    "deploy:app": "now --local-config app.now.json",
+    "deploy:app": "now --local-config app.now.json --prod",
     "deploy:website": "now --local-config website.now.json --prod",
-    "deploy:all": "yarn deploy:app & yarn deploy:website --prod"
+    "deploy:all": "yarn deploy:app & yarn deploy:website"
   }
 }
