@@ -1,5 +1,5 @@
 function isLogged() {
-  return true
+  return true;
 }
 
 function login() {
