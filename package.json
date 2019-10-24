@@ -5,7 +5,7 @@
   "scripts": {
     "deploy:app": "now --local-config app.now.json --prod",
     "deploy:website": "now --local-config website.now.json --prod",
-    "deploy:all": "yarn deploy:app & yarn deploy:website",
+    "deploy": "git tag -d production && git push origin :production && git tag production && git push origin production",
     "start:app": "cd packages/app; yarn start",
     "start:website": "cd packages/website; yarn dev",
     "start:all": "yarn start:app & yarn start:website"
