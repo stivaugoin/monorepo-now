@@ -12,6 +12,6 @@ jobs:
     - name: Install
       run: yarn
     - name: Test App
-      run: yarn test:app
+      run: CI=true yarn test:app
     - name: Test Website
-      run: yarn test:website
+      run: CI=true yarn test:website
