@@ -9,6 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: Install
+      run: yarn
     - name: Test App
       run: yarn test:app
     - name: Test Website
